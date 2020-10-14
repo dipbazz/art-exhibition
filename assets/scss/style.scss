@@ -1,4 +1,5 @@
 @import 'config';
+@import 'utility';
 
 * {
   margin: 0;
@@ -7,6 +8,21 @@
   font-family: 'Lato', sans-serif;
 }
 
-.bg-dark {
-  background-color: $dark-color;
+a {
+  text-decoration: none;
+  color: inherit;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// styles for navbar
+.top-header {
+  display: none;
+}
+
+// media query import
+@import 'tablet';
+@import 'desktop';

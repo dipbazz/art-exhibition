@@ -1,0 +1,73 @@
+// background and text color classes
+@each $name, $color in $color-list {
+  .bg-#{$name} {
+    background-color: $color;
+  }
+
+  .text-#{$name} {
+    color: $color;
+  }
+}
+
+// margin and padding classes
+@for $space from 1 through 5 {
+  .m-#{$space} {
+    margin: #{$space * 0.5}rem;
+  }
+
+  .my-#{$space} {
+    margin-top: #{$space * 0.5}rem;
+    margin-bottom: #{$space * 0.5}rem;
+  }
+
+  .mx-#{$space} {
+    margin-left: #{$space * 0.5}rem;
+    margin-right: #{$space * 0.5}rem;
+  }
+
+  .mt-#{$space} {
+    margin-top: #{$space * 0.5}rem;
+  }
+
+  .mb-#{$space} {
+    margin-bottom: #{$space * 0.5}rem;
+  }
+
+  .ml-#{$space} {
+    margin-left: #{$space * 0.5}rem;
+  }
+
+  .mr-#{$space} {
+    margin-right: #{$space * 0.5}rem;
+  }
+
+  .p-#{$space} {
+    padding: #{$space * 0.5}rem;
+  }
+
+  .py-#{$space} {
+    padding-top: #{$space * 0.5}rem;
+    padding-bottom: #{$space * 0.5}rem;
+  }
+
+  .px-#{$space} {
+    padding-left: #{$space * 0.5}rem;
+    padding-right: #{$space * 0.5}rem;
+  }
+
+  .pt-#{$space} {
+    padding-top: #{$space * 0.5}rem;
+  }
+
+  .pb-#{$space} {
+    padding-bottom: #{$space * 0.5}rem;
+  }
+
+  .pl-#{$space} {
+    padding-left: #{$space * 0.5}rem;
+  }
+
+  .pr-#{$space} {
+    padding-right: #{$space * 0.5}rem;
+  }
+}

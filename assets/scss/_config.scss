@@ -1,3 +1,15 @@
+// variables
 $dark-color:#272a31;
 $red-color: #ec5242;
 $light-color: #d3d3d3;
+$white-color: #fff;
+
+// breakpoint width variables.
+$small: 576px;
+$medium: 768px;
+$large: 992px;
+$extra-large: 1200px;
+
+// variables list.
+$breakpoint-list: ("sm": $small, "md": $medium, "lg": $large, "#xl": $extra-large);
+$color-list: ("dark": $dark-color, "red": $red-color, "light": $light-color, "white": $white-color);

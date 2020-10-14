@@ -1,0 +1,14 @@
+@media (min-width: 768px) {
+  .navbar-items {
+    display: flex;
+    list-style-type: none;
+  }
+
+  .top-header {
+    display: block;
+
+    .navbar-items {
+      justify-content: flex-end;
+    }
+  }
+}
