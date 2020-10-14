@@ -3,9 +3,141 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
   <title>Art Exhibition page.</title>
 </head>
 <body>
+
+  <header>
+    <div class="top-header bg-dark">
+      <nav>
+        <ul>
+          <li>
+            <a href="#"><span class="iconify" data-icon="brandico:facebook" data-inline="false"></span></a>
+          </li>
+          <li>
+            <a href="#"><span class="iconify" data-icon="ant-design:twitter-outlined" data-inline="false"></span></a>
+          </li>
+          <li>
+            <a href="#">English</a>
+          </li>
+          <li>
+            <a href="#">My Page</a>
+          </li>
+          <li>
+            <a href="#">Logout</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="bottom-header">
+      <div class="logo-wrapper">
+        <a href="#" class="header-logo logo">
+          <span class="iconify" data-icon="ps:arto" data-inline="false"></span>
+        </a>
+      </div>
+
+      <nav class="navbar">
+        <ul class="navbar-items">
+          <li class="navbar-item"><a href="#" class="nav-link">Home</a></li>
+          <li class="navbar-item"><a href="#program" class="nav-link">Program</a></li>
+          <li class="navbar-item"><a href="#artist" class="nav-link">Artist</a></li>
+          <li class="navbar-item"><a href="#partner" class="nav-link">Partner</a></li>
+          <li class="navbar-item"><a href="#" class="nav-link">About</a></li>
+        </ul>
+
+        <button class="btn btn-outline-red">Reservation</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="banner">
+      <section class="banner-highlight">
+        <h1 class="top">"Hello! Imagining world!"</h1>
+        <h1 class="main">Global Art Exhibition 2020</h1>
+      </section>
+
+      <div class="banner-info">
+        <p class="info-text">A joyful exhibition and a life time opportunity to view and feel the imagination
+          from talented artist around the world is taking place in October, in Los Angeles, USA.</p>
+      </div>
+
+      <section class="banner-date-location">
+        <h1 class="banner-date">2020.10.20(TUE) ~ 21(WED)</h1>
+        <p class="banner-location">@ LA Art Show of Los Angeles, USA</p>
+      </section>
+    </div>
+
+    <section class="program" id="program">
+      <h2 class="main-heading">Main Program</h2>
+
+      <div class="program-container">
+        <div class="program-item">
+          <div class="program-icon"><span class="iconify" data-icon="gridicons:reader-following" data-inline="false"></span></div>
+          <h3 class="program-title">Guidance</h3>
+          <p class="program-info">
+            Our volunter will provide you with the information about the exhibition and how can you achieve best out of the exhibition.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="artist" id="artist">
+      <h2 class="main-heading">Featured Artists</h2>
+
+      <div class="artist-container">
+        <div class="artist-item">
+          <figure class="artist-img">
+            <img src="./assets/images/artists/gerhard_richter.jpg" alt="Gerhard Richter">
+          </figure>
+          <div class="artist-info">
+            <h3 class="artist-name">Gerhard Richter</h3>
+            <p class="artist-profession">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p class="artist-short-bio">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi exercitationem eos dolor ipsum
+              ratione veniam quidem aspernatur, magni impedit! Voluptatem illo culpa iusto id laudantium!
+              Ab ad maxime maiores distinctio!
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="partner bg-dark" id="partner">
+      <h2 class="main-heading">Partner</h2>
+
+      <div class="partner-container">
+        <div class="partner-item">
+          <a href="#">
+            <figure>
+              <img src="./assets/images/partner/mozilla.png" alt="mozilla text logo">
+            </figure>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <a href="#"></a>
+      <figure class="footer-logo logo">
+        <span class="iconify" data-icon="ps:arto" data-inline="false"></span>
+      </figure>
+      <h2 class="footer-logo-text">Global Art Exhibition</h2>
+    </div>
+
+    <div class="copyright-container">
+      <p class="copyright">2020 Global Art Exhibition. Some Rights Reserved.</p>
+    </div>
+  </footer>
 
 </body>
 </html>
