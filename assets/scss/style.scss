@@ -1,5 +1,6 @@
 @import 'config';
 @import 'utility';
+
 @use 'sass:color';
 
 * {
@@ -82,7 +83,7 @@ img {
   &-info {
     border: 2px solid $white-color;
     background-color: transparentize($color: $light-color, $amount: 0.2);
-    color: #323232;
+    color: $dark-color;
   }
 
   &-date {
@@ -91,7 +92,7 @@ img {
   }
 
   &-location {
-    color: #323232;
+    color: $dark-color;
   }
 }
 
@@ -127,6 +128,72 @@ img {
     padding: 1.8rem 2.8rem;
     font-size: 1.1rem;
     font-weight: bold;
+  }
+}
+
+// artist styles
+.artist {
+  &-item {
+    display: flex;
+    align-items: center;
+  }
+
+  &-img {
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      height: 20px;
+      width: 20px;
+    }
+
+    &::before {
+      left: 0;
+      top: 0;
+      border-left: 3px double $red-color;
+      border-top: 3px double $red-color;
+    }
+
+    &::after {
+      right: 0;
+      bottom: 0;
+      border-right: 3px double $red-color;
+      border-bottom: 3px double $red-color;
+    }
+
+    img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+
+  &-info {
+    flex: 3;
+  }
+
+  &-profession {
+    font-style: italic;
+    position: relative;
+    font-size: 0.9rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 20px;
+      background-color: $light-color;
+      height: 1px;
+    }
+  }
+
+  &-short-bio {
+    font-size: 0.9rem;
+    color: $dark-color;
   }
 }
 

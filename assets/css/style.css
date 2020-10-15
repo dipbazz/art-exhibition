@@ -448,7 +448,7 @@ img {
 .banner-info {
   border: 2px solid #fff;
   background-color: rgba(211, 211, 211, 0.8);
-  color: #323232;
+  color: #272a31;
 }
 
 .banner-date {
@@ -457,7 +457,7 @@ img {
 }
 
 .banner-location {
-  color: #323232;
+  color: #272a31;
 }
 
 .program {
@@ -502,6 +502,76 @@ img {
   padding: 1.8rem 2.8rem;
   font-size: 1.1rem;
   font-weight: bold;
+}
+
+.artist-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.artist-img {
+  position: relative;
+}
+
+.artist-img::before, .artist-img::after {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+}
+
+.artist-img::before {
+  left: 0;
+  top: 0;
+  border-left: 3px double #ec5242;
+  border-top: 3px double #ec5242;
+}
+
+.artist-img::after {
+  right: 0;
+  bottom: 0;
+  border-right: 3px double #ec5242;
+  border-bottom: 3px double #ec5242;
+}
+
+.artist-img img {
+  width: 140px;
+  height: 140px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+
+.artist-info {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+
+.artist-profession {
+  font-style: italic;
+  position: relative;
+  font-size: 0.9rem;
+}
+
+.artist-profession::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 20px;
+  background-color: #d3d3d3;
+  height: 1px;
+}
+
+.artist-short-bio {
+  font-size: 0.9rem;
+  color: #272a31;
 }
 
 @media (min-width: 768px) {
