@@ -40,16 +40,35 @@ img {
 }
 
 // styles for navbar
+.header {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  background: transparent;
+
+  &.fixed-header {
+    background: #fff;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15);
+    animation: slide-down 0.2s ease-in;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    top: -70px;
+  }
+
+  to {
+    top: 0;
+  }
+}
+
 .top-header {
   display: none;
 }
 
 .bottom-header {
-  position: fixed;
-  z-index: 100;
-  left: 0;
-  right: 0;
-
   .logo-wrapper,
   .navbar {
     display: none;
@@ -240,6 +259,29 @@ img {
         filter: grayscale(0);
       }
     }
+  }
+}
+
+// footer styles
+.footer {
+  display: flex;
+  align-items: center;
+  padding-left: 4rem;
+  padding-right: 4rem;
+
+  .logo-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .footer-logo-text {
+    white-space: nowrap;
+    line-height: 1;
+    color: $dark-color;
+  }
+
+  .copyright {
+    color: #686868;
   }
 }
 
