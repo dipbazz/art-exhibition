@@ -1,69 +1,103 @@
-@media (min-width: $medium) {
-  // header styles
+// header styles
+.navbar-items {
+  display: flex;
+  list-style-type: none;
+}
+
+.top-header {
+  display: block;
 
   .navbar-items {
-    display: flex;
-    list-style-type: none;
+    justify-content: flex-end;
+  }
+}
+
+.bottom-header {
+  display: flex;
+  justify-content: space-between;
+
+  .navbar-toogle {
+    display: none;
   }
 
-  .top-header {
-    display: block;
-
-    .navbar-items {
-      justify-content: flex-end;
-    }
+  .logo-wrapper,
+  .navbar {
+    display: flex;
+    align-items: center;
   }
 
-  .bottom-header {
-    display: flex;
-    justify-content: space-between;
+  .btn-outline {
+    border-width: 4px;
+  }
+}
 
-    .navbar-toogle {
+.header {
+  position: relative;
+  background: $white-color;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+
+  &.fixed-header {
+    .top-header {
       display: none;
     }
+  }
+}
 
-    .logo-wrapper,
-    .navbar {
+// banner styles
+.banner {
+  background-image: url(../images/cover.jpg), linear-gradient(transparent 0%, transparentize($dark-color, 0.8) 0%);
+  min-height: 65vh;
+
+  &-highlight,
+  &-info,
+  &-date-location {
+    max-width: 60%;
+  }
+
+  &-highlight {
+    .top {
+      font-size: 2rem;
+    }
+
+    .main {
+      font-size: 4rem;
+    }
+  }
+}
+
+// program styles
+.program {
+  .program-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 5px;
+  }
+
+  .program-item {
+    display: block;
+    text-align: center;
+  }
+}
+
+// artist styles
+.artist {
+  &-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &-item {
+    &:nth-child(n+4) {
       display: flex;
-      align-items: center;
-    }
-
-    .btn-outline {
-      border-width: 4px;
     }
   }
 
-  .header {
-    position: relative;
-    background: $white-color;
-    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
-
-    &.fixed-header {
-      .top-header {
-        display: none;
-      }
-    }
+  &-button {
+    display: none;
   }
+}
 
-  // banner styles
-  .banner {
-    background-image: url(../images/cover.jpg), linear-gradient(transparent 0%, transparentize($dark-color, 0.8) 0%);
-    min-height: 65vh;
-
-    &-highlight,
-    &-info,
-    &-date-location {
-      max-width: 60%;
-    }
-
-    &-highlight {
-      .top {
-        font-size: 2rem;
-      }
-
-      .main {
-        font-size: 4rem;
-      }
-    }
-  }
+// footer styles
+.footer {
+  justify-content: center;
 }

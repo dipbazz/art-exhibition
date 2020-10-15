@@ -541,6 +541,12 @@ img {
       -ms-flex-align: center;
           align-items: center;
   background-color: #3e424d;
+  border: 2px solid transparent;
+}
+
+.program .program-item:hover {
+  border: 2px solid #fff;
+  cursor: pointer;
 }
 
 .program .program-icon {
@@ -560,6 +566,7 @@ img {
   -webkit-box-flex: 4;
       -ms-flex: 4;
           flex: 4;
+  font-size: 0.8rem;
 }
 
 .program .program-button {
@@ -792,5 +799,35 @@ img {
   }
   .banner-highlight .main {
     font-size: 4rem;
+  }
+  .program .program-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 5px;
+  }
+  .program .program-item {
+    display: block;
+    text-align: center;
+  }
+  .artist-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .artist-item:nth-child(n+4) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .artist-button {
+    display: none;
+  }
+  .footer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }

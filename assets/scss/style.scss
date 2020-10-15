@@ -130,6 +130,12 @@ img {
     display: flex;
     align-items: center;
     background-color: lighten($dark-color, 10%);
+    border: 2px solid transparent;
+
+    &:hover {
+      border: 2px solid $white-color;
+      cursor: pointer;
+    }
   }
 
   .program-icon {
@@ -143,6 +149,7 @@ img {
 
   .program-info {
     flex: 4;
+    font-size: 0.8rem;
   }
 
   .program-button {
@@ -291,4 +298,6 @@ img {
 }
 
 // media query import
-@import 'tablet';
+@media (min-width: $medium) {
+  @import 'tablet';
+}
