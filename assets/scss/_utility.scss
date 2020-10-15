@@ -15,6 +15,16 @@
   padding: 1rem;
 }
 
+.btn-outline {
+  border: 1px solid $light-color;
+  background: none;
+  padding: 0.5rem;
+}
+
+.btn-outline-red {
+  border-color: $red-color;
+}
+
 .btn-red {
   background-color: $red-color;
   color: $white-color;

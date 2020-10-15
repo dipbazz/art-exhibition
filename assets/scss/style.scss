@@ -1,13 +1,15 @@
 @import 'config';
 @import 'utility';
 
-@use 'sass:color';
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
+}
+
+:focus {
+  outline: 1px dotted $dark-color;
 }
 
 a {
@@ -136,6 +138,10 @@ img {
   &-item {
     display: flex;
     align-items: center;
+
+    &:nth-child(n+4) {
+      display: none;
+    }
   }
 
   &-img {
@@ -194,6 +200,46 @@ img {
   &-short-bio {
     font-size: 0.9rem;
     color: $dark-color;
+    line-height: 1.4;
+  }
+
+  &-button {
+    .btn-more {
+      border-radius: 3px;
+      width: 100%;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 700;
+      padding: 1rem;
+    }
+
+    .iconify {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.partner {
+  &-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-item {
+    width: 180px;
+
+    img {
+      filter: grayscale(1);
+      transition: filter 0.2s linear;
+
+      &:hover {
+        filter: grayscale(0);
+      }
+    }
   }
 }
 

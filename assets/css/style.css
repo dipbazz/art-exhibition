@@ -35,6 +35,16 @@
   padding: 1rem;
 }
 
+.btn-outline {
+  border: 1px solid #d3d3d3;
+  background: none;
+  padding: 0.5rem;
+}
+
+.btn-outline-red {
+  border-color: #ec5242;
+}
+
 .btn-red {
   background-color: #ec5242;
   color: #fff;
@@ -360,13 +370,16 @@
   font-size: 5rem;
 }
 
-@use 'sass:color';
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: 'Lato', sans-serif;
+}
+
+:focus {
+  outline: 1px dotted #272a31;
 }
 
 a {
@@ -513,6 +526,10 @@ img {
           align-items: center;
 }
 
+.artist-item:nth-child(n+4) {
+  display: none;
+}
+
 .artist-img {
   position: relative;
 }
@@ -572,6 +589,60 @@ img {
 .artist-short-bio {
   font-size: 0.9rem;
   color: #272a31;
+  line-height: 1.4;
+}
+
+.artist-button .btn-more {
+  border-radius: 3px;
+  width: 100%;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 700;
+  padding: 1rem;
+}
+
+.artist-button .iconify {
+  font-size: 1.5rem;
+}
+
+.partner-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.partner-item {
+  width: 200px;
+}
+
+.partner-item img {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  -webkit-transition: -webkit-filter 0.2s linear;
+  transition: -webkit-filter 0.2s linear;
+  transition: filter 0.2s linear;
+  transition: filter 0.2s linear, -webkit-filter 0.2s linear;
+}
+
+.partner-item img:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
 }
 
 @media (min-width: 768px) {
