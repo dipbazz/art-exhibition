@@ -9,6 +9,13 @@
   }
 }
 
+// fixed width
+.max-width {
+  max-width: $lg-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 // buttons
 .btn {
   border: none;
@@ -97,5 +104,13 @@
 @for $value from 1 through 5 {
   .font-#{$value}x {
     font-size: #{$value}rem;
+  }
+}
+
+@media (min-width: $medium) {
+  @for $value from 1 through 5 {
+    .font-md-#{$value}x {
+      font-size: #{$value}rem;
+    }
   }
 }

@@ -40,6 +40,17 @@ img {
 }
 
 // styles for navbar
+.bottom-header {
+  .logo-wrapper,
+  .navbar {
+    display: none;
+  }
+}
+
+.top-header {
+  display: none;
+}
+
 .header {
   position: fixed;
   z-index: 100;
@@ -48,6 +59,7 @@ img {
   background: transparent;
 
   &.fixed-header {
+    position: fixed;
     background: #fff;
     box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15);
     animation: slide-down 0.2s ease-in;
@@ -60,7 +72,7 @@ img {
 
 @keyframes slide-down {
   from {
-    top: -70px;
+    top: -150px;
   }
 
   to {
@@ -68,20 +80,9 @@ img {
   }
 }
 
-.top-header {
-  display: none;
-}
-
-.bottom-header {
-  .logo-wrapper,
-  .navbar {
-    display: none;
-  }
-}
-
 // banner styles
 .banner {
-  background-image: url(../images/cover.jpg), linear-gradient(transparent 12%, transparentize($dark-color, 0.9) 12%);
+  background-image: url(../images/cover.jpg), linear-gradient(transparent 12%, transparentize($dark-color, 0.8) 12%);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -112,12 +113,11 @@ img {
   }
 
   &-date {
-    color: #414447;
     font-weight: 900;
   }
 
   &-location {
-    color: $dark-color;
+    color: darken($white-color, 10%);
   }
 }
 
@@ -292,4 +292,3 @@ img {
 
 // media query import
 @import 'tablet';
-@import 'desktop';

@@ -1,4 +1,6 @@
-@media (min-width: 768px) {
+@media (min-width: $medium) {
+  // header styles
+
   .navbar-items {
     display: flex;
     list-style-type: none;
@@ -9,6 +11,59 @@
 
     .navbar-items {
       justify-content: flex-end;
+    }
+  }
+
+  .bottom-header {
+    display: flex;
+    justify-content: space-between;
+
+    .navbar-toogle {
+      display: none;
+    }
+
+    .logo-wrapper,
+    .navbar {
+      display: flex;
+      align-items: center;
+    }
+
+    .btn-outline {
+      border-width: 4px;
+    }
+  }
+
+  .header {
+    position: relative;
+    background: $white-color;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+
+    &.fixed-header {
+      .top-header {
+        display: none;
+      }
+    }
+  }
+
+  // banner styles
+  .banner {
+    background-image: url(../images/cover.jpg), linear-gradient(transparent 0%, transparentize($dark-color, 0.8) 0%);
+    min-height: 65vh;
+
+    &-highlight,
+    &-info,
+    &-date-location {
+      max-width: 60%;
+    }
+
+    &-highlight {
+      .top {
+        font-size: 2rem;
+      }
+
+      .main {
+        font-size: 4rem;
+      }
     }
   }
 }
