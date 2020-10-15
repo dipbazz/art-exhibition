@@ -9,6 +9,17 @@
   }
 }
 
+// buttons
+.btn {
+  border: none;
+  padding: 1rem;
+}
+
+.btn-red {
+  background-color: $red-color;
+  color: $white-color;
+}
+
 // margin and padding classes
 @for $space from 1 through 5 {
   .m-#{$space} {
@@ -69,5 +80,12 @@
 
   .pr-#{$space} {
     padding-right: #{$space * 0.5}rem;
+  }
+}
+
+// font sizes
+@for $value from 1 through 5 {
+  .font-#{$value}x {
+    font-size: #{$value}rem;
   }
 }

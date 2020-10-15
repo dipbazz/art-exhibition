@@ -30,6 +30,16 @@
   color: #fff;
 }
 
+.btn {
+  border: none;
+  padding: 1rem;
+}
+
+.btn-red {
+  background-color: #ec5242;
+  color: #fff;
+}
+
 .m-1 {
   margin: 0.5rem;
 }
@@ -330,6 +340,27 @@
   padding-right: 2.5rem;
 }
 
+.font-1x {
+  font-size: 1rem;
+}
+
+.font-2x {
+  font-size: 2rem;
+}
+
+.font-3x {
+  font-size: 3rem;
+}
+
+.font-4x {
+  font-size: 4rem;
+}
+
+.font-5x {
+  font-size: 5rem;
+}
+
+@use 'sass:color';
 * {
   margin: 0;
   padding: 0;
@@ -348,8 +379,129 @@ img {
   height: auto;
 }
 
+.main-heading {
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+}
+
+.main-heading::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 50px;
+  height: 1.5px;
+  background-color: #ec5242;
+}
+
 .top-header {
   display: none;
+}
+
+.bottom-header {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  right: 0;
+}
+
+.bottom-header .logo-wrapper,
+.bottom-header .navbar {
+  display: none;
+}
+
+.banner {
+  background-image: url(../images/cover.jpg), -webkit-gradient(linear, left top, left bottom, color-stop(12%, transparent), color-stop(12%, rgba(39, 42, 49, 0.1)));
+  background-image: url(../images/cover.jpg), linear-gradient(transparent 12%, rgba(39, 42, 49, 0.1) 12%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 60vh;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-blend-mode: multiply;
+}
+
+.banner-highlight .top {
+  font-weight: normal;
+}
+
+.banner-highlight .main {
+  color: #e42a17;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.banner-info {
+  border: 2px solid #fff;
+  background-color: rgba(211, 211, 211, 0.8);
+  color: #323232;
+}
+
+.banner-date {
+  color: #414447;
+  font-weight: 900;
+}
+
+.banner-location {
+  color: #323232;
+}
+
+.program {
+  background-color: #272a31;
+  color: #fff;
+}
+
+.program .program-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #3e424d;
+}
+
+.program .program-icon {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.program .program-title {
+  font-weight: 900;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+.program .program-info {
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+}
+
+.program .program-button {
+  text-align: center;
+}
+
+.program .btn-join {
+  padding: 1.8rem 2.8rem;
+  font-size: 1.1rem;
+  font-weight: bold;
 }
 
 @media (min-width: 768px) {

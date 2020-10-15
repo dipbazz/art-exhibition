@@ -1,5 +1,6 @@
 @import 'config';
 @import 'utility';
+@use 'sass:color';
 
 * {
   margin: 0;
@@ -18,9 +19,115 @@ img {
   height: auto;
 }
 
+.main-heading {
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+}
+
+.main-heading::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 1.5px;
+  background-color: $red-color;
+}
+
 // styles for navbar
 .top-header {
   display: none;
+}
+
+.bottom-header {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  right: 0;
+
+  .logo-wrapper,
+  .navbar {
+    display: none;
+  }
+}
+
+// banner styles
+.banner {
+  background-image: url(../images/cover.jpg), linear-gradient(transparent 12%, transparentize($dark-color, 0.9) 12%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 60vh;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-blend-mode: multiply;
+
+  &-highlight {
+    .top {
+      font-weight: normal;
+    }
+
+    .main {
+      color: darken($red-color, 10%);
+      line-height: 1;
+      font-weight: 900;
+    }
+  }
+
+  &-info {
+    border: 2px solid $white-color;
+    background-color: transparentize($color: $light-color, $amount: 0.2);
+    color: #323232;
+  }
+
+  &-date {
+    color: #414447;
+    font-weight: 900;
+  }
+
+  &-location {
+    color: #323232;
+  }
+}
+
+// program styles
+.program {
+  background-color: $dark-color;
+  color: $white-color;
+
+  .program-item {
+    display: flex;
+    align-items: center;
+    background-color: lighten($dark-color, 10%);
+  }
+
+  .program-icon {
+    flex: 1;
+  }
+
+  .program-title {
+    font-weight: 900;
+    flex: 2;
+  }
+
+  .program-info {
+    flex: 4;
+  }
+
+  .program-button {
+    text-align: center;
+  }
+
+  .btn-join {
+    padding: 1.8rem 2.8rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
 }
 
 // media query import
