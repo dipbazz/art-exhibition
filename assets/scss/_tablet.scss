@@ -70,6 +70,18 @@
       font-size: 4rem;
     }
   }
+
+  &.about {
+    background-image: url(../images/about_banner.jpg), linear-gradient(transparent 0%, transparentize($dark-color, 0.8) 0%);
+
+    .banner-highlight,
+    .banner-info,
+    .banner-date-location {
+      max-width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }
 
 // program styles
@@ -118,6 +130,35 @@
     display: none;
   }
 }
+
+// about page styles start
+.about-logo {
+  .heading-info {
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
+}
+
+.past-exhibition {
+  &-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  &-item {
+    min-height: 200px;
+    min-width: 350px;
+
+    &.first {
+      margin-right: 0.5rem;
+    }
+
+    &.second {
+      margin-left: 0.5rem;
+    }
+  }
+}
+// about page styles end
 
 // footer styles
 .footer {

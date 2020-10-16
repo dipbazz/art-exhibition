@@ -98,6 +98,16 @@ img {
   justify-content: center;
   background-blend-mode: multiply;
 
+  &.about {
+    background-image: url(../images/about_banner.jpg), linear-gradient(transparent 12%, transparentize($dark-color, 0.8) 12%);
+    text-align: center;
+
+    .email {
+      text-decoration: underline;
+      font-weight: bold;
+    }
+  }
+
   &-highlight {
     .top {
       font-weight: normal;
@@ -290,6 +300,58 @@ img {
   }
 }
 
+// about page styles start
+.heading-info {
+  text-align: center;
+}
+
+.about-logo {
+  text-align: center;
+
+  .logo-wrapper {
+    border: 1px solid $light-color;
+    max-width: 300px;
+    padding: 2rem 4rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.past-exhibition {
+  &-link:focus {
+    .past-exhibition-item {
+      background-color: transparentize($color: $red-color, $amount: 0.5);
+    }
+  }
+
+  &-item {
+    min-height: 250px;
+    background-color: transparentize($color: $red-color, $amount: 0.2);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &:hover {
+      background-color: transparentize($color: $red-color, $amount: 0.5);
+    }
+
+    &.first {
+      background-image: url(../images/cover_2018.jpg);
+    }
+
+    &.second {
+      background-image: url(../images/cover_2016.jpg);
+    }
+  }
+}
+
+// about page styles end
+
 // footer styles
 .footer {
   display: flex;
@@ -297,6 +359,14 @@ img {
   padding-left: 4rem;
   padding-right: 4rem;
   flex-wrap: wrap;
+
+  &.bg-dark {
+    color: white;
+  }
+
+  &.about-footer {
+    justify-content: center;
+  }
 
   .logo-wrapper {
     display: flex;
@@ -306,7 +376,6 @@ img {
   .footer-logo-text {
     white-space: nowrap;
     line-height: 1;
-    color: $dark-color;
   }
 
   .copyright {

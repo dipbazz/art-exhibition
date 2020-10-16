@@ -3,6 +3,7 @@ $dark-color:#272a31;
 $red-color: #ec5242;
 $light-color: #d3d3d3;
 $white-color: #fff;
+$lighter-color: #f7f7f7;
 
 // breakpoint width variables.
 $medium: 768px;
@@ -11,4 +12,4 @@ $medium: 768px;
 $lg-width: 1200px;
 
 // variables list.
-$color-list: ("dark": $dark-color, "red": $red-color, "light": $light-color, "white": $white-color);
+$color-list: ("dark": $dark-color, "red": $red-color, "light": $light-color, "lighter": $lighter-color, "white": $white-color);
