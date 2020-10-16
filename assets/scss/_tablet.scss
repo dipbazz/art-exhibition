@@ -29,6 +29,13 @@
   .btn-outline {
     border-width: 4px;
   }
+
+  .nav-link {
+    &.active,
+    &:hover {
+      color: $red-color;
+    }
+  }
 }
 
 .header {
@@ -76,6 +83,21 @@
   .program-item {
     display: block;
     text-align: center;
+  }
+
+  .program-button {
+    .btn-red {
+      display: none;
+    }
+  }
+
+  .program-more {
+    display: block;
+    text-decoration: underline;
+
+    &:hover {
+      color: $red-color;
+    }
   }
 }
 

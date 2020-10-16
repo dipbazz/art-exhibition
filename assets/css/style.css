@@ -39,12 +39,14 @@
 .btn {
   border: none;
   padding: 1rem;
+  cursor: pointer;
 }
 
 .btn-outline {
   border: 1px solid #d3d3d3;
   background: none;
   padding: 0.5rem;
+  cursor: pointer;
 }
 
 .btn-outline-red {
@@ -402,6 +404,10 @@
   font-family: 'Lato', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :focus {
   outline: 1px dotted #272a31;
 }
@@ -573,6 +579,10 @@ img {
   text-align: center;
 }
 
+.program .program-more {
+  display: none;
+}
+
 .program .btn-join {
   padding: 1.8rem 2.8rem;
   font-size: 1.1rem;
@@ -693,7 +703,7 @@ img {
   width: 180px;
 }
 
-.partner-item img {
+.partner-item .partner-logo {
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
   -webkit-transition: -webkit-filter 0.2s linear;
@@ -702,7 +712,12 @@ img {
   transition: filter 0.2s linear, -webkit-filter 0.2s linear;
 }
 
-.partner-item img:hover {
+.partner-item .partner-logo:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+.partner .partner-link:focus .partner-logo {
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
 }
@@ -777,6 +792,9 @@ img {
   .bottom-header .btn-outline {
     border-width: 4px;
   }
+  .bottom-header .nav-link.active, .bottom-header .nav-link:hover {
+    color: #ec5242;
+  }
   .header {
     position: relative;
     background: #fff;
@@ -810,6 +828,16 @@ img {
   .program .program-item {
     display: block;
     text-align: center;
+  }
+  .program .program-button .btn-red {
+    display: none;
+  }
+  .program .program-more {
+    display: block;
+    text-decoration: underline;
+  }
+  .program .program-more:hover {
+    color: #ec5242;
   }
   .artist-container {
     display: -ms-grid;

@@ -8,6 +8,10 @@
   font-family: 'Lato', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :focus {
   outline: 1px dotted $dark-color;
 }
@@ -156,6 +160,10 @@ img {
     text-align: center;
   }
 
+  .program-more {
+    display: none;
+  }
+
   .btn-join {
     padding: 1.8rem 2.8rem;
     font-size: 1.1rem;
@@ -251,6 +259,7 @@ img {
   }
 }
 
+// partner styles
 .partner {
   &-container {
     display: flex;
@@ -262,11 +271,19 @@ img {
   &-item {
     width: 180px;
 
-    img {
+    .partner-logo {
       filter: grayscale(1);
       transition: filter 0.2s linear;
 
       &:hover {
+        filter: grayscale(0);
+      }
+    }
+  }
+
+  .partner-link {
+    &:focus {
+      .partner-logo {
         filter: grayscale(0);
       }
     }

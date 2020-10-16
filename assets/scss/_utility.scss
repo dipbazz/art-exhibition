@@ -20,12 +20,14 @@
 .btn {
   border: none;
   padding: 1rem;
+  cursor: pointer;
 }
 
 .btn-outline {
   border: 1px solid $light-color;
   background: none;
   padding: 0.5rem;
+  cursor: pointer;
 }
 
 .btn-outline-red {
