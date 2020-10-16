@@ -32,11 +32,24 @@
 
 .btn-outline-red {
   border-color: $red-color;
+  transition: all 0.2s linear;
+
+  &:hover {
+    background-color: $red-color;
+    color: white;
+  }
 }
 
 .btn-red {
   background-color: $red-color;
   color: $white-color;
+  transition: all 0.2s linear;
+
+  &:hover {
+    background-color: darken($color: $red-color, $amount: 10%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transform: scale(0.95);
+  }
 }
 
 // margin and padding classes

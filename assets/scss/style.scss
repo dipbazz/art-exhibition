@@ -26,6 +26,16 @@ img {
   height: auto;
 }
 
+table {
+  border-collapse: collapse;
+
+  td,
+  th {
+    padding: 0.8rem 1.5rem;
+    text-align: center;
+  }
+}
+
 .main-heading {
   text-align: center;
   padding: 1rem;
@@ -318,13 +328,7 @@ img {
 }
 
 .past-exhibition {
-  &-link:focus {
-    .past-exhibition-item {
-      background-color: transparentize($color: $red-color, $amount: 0.5);
-    }
-  }
-
-  &-item {
+  .past-exhibition-item {
     min-height: 250px;
     background-color: transparentize($color: $red-color, $amount: 0.2);
     background-blend-mode: multiply;
@@ -348,9 +352,113 @@ img {
       background-image: url(../images/cover_2016.jpg);
     }
   }
+
+  .past-exhibition-link:focus {
+    .past-exhibition-item {
+      background-color: transparentize($color: $red-color, $amount: 0.5);
+    }
+  }
+}
+// about page styles end
+
+// ticket page styles start
+.table-wrapper {
+  overflow-y: auto;
+
+  .table-head {
+    background-color: lighten($color: $light-color, $amount: 10%);
+  }
 }
 
-// about page styles end
+.table {
+  width: 100%;
+
+  td,
+  th {
+    font-size: 0.8rem;
+    border: 1px solid #ccc;
+  }
+}
+
+.select-ticket {
+  padding-bottom: 3rem;
+
+  .ticket-step {
+    display: flex;
+    justify-content: center;
+  }
+
+  .step-text {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      height: 7px;
+      width: 7px;
+      background-color: $red-color;
+      transform: rotate(45deg);
+      top: 5px;
+    }
+  }
+
+  .heading-info {
+    border: 1px solid $light-color;
+    border-radius: 100px;
+    font-size: 0.85rem;
+  }
+
+  .border-table {
+    margin: auto;
+    min-width: 80%;
+    border: 10px solid transparent;
+    border-image: repeating-linear-gradient(-45deg, #ec5242 0, #ec5242 1em, transparent 1em, transparent 2em, #272a31 2em, #272a31 3em, transparent 3em, transparent 4em) 20 repeat;
+  }
+}
+
+.ticket-button {
+  display: flex;
+  justify-content: center;
+
+  .btn-book {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+.menu-table {
+  .menu-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  thead {
+    td {
+      border-bottom: none;
+    }
+  }
+
+  tbody {
+    td {
+      border-top: none;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+
+      &:nth-child(n):not(:last-child) {
+        border-right: none;
+      }
+
+      &:nth-child(n+1):not(:first-child) {
+        border-left: none;
+      }
+    }
+  }
+}
+// ticket page styles end
 
 // footer styles
 .footer {

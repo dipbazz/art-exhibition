@@ -59,11 +59,28 @@
 
 .btn-outline-red {
   border-color: #ec5242;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.btn-outline-red:hover {
+  background-color: #ec5242;
+  color: white;
 }
 
 .btn-red {
   background-color: #ec5242;
   color: #fff;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.btn-red:hover {
+  background-color: #e42a17;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
 }
 
 .m-1 {
@@ -430,6 +447,16 @@ img {
   height: auto;
 }
 
+table {
+  border-collapse: collapse;
+}
+
+table td,
+table th {
+  padding: 0.8rem 1.5rem;
+  text-align: center;
+}
+
 .main-heading {
   text-align: center;
   padding: 1rem;
@@ -757,11 +784,7 @@ img {
   margin-right: auto;
 }
 
-.past-exhibition-link:focus .past-exhibition-item {
-  background-color: rgba(236, 82, 66, 0.5);
-}
-
-.past-exhibition-item {
+.past-exhibition .past-exhibition-item {
   min-height: 250px;
   background-color: rgba(236, 82, 66, 0.8);
   background-blend-mode: multiply;
@@ -780,16 +803,127 @@ img {
   text-align: center;
 }
 
-.past-exhibition-item:hover {
+.past-exhibition .past-exhibition-item:hover {
   background-color: rgba(236, 82, 66, 0.5);
 }
 
-.past-exhibition-item.first {
+.past-exhibition .past-exhibition-item.first {
   background-image: url(../images/cover_2018.jpg);
 }
 
-.past-exhibition-item.second {
+.past-exhibition .past-exhibition-item.second {
   background-image: url(../images/cover_2016.jpg);
+}
+
+.past-exhibition .past-exhibition-link:focus .past-exhibition-item {
+  background-color: rgba(236, 82, 66, 0.5);
+}
+
+.table-wrapper {
+  overflow-y: auto;
+}
+
+.table-wrapper .table-head {
+  background-color: #ededed;
+}
+
+.table {
+  width: 100%;
+}
+
+.table td,
+.table th {
+  font-size: 0.8rem;
+  border: 1px solid #ccc;
+}
+
+.select-ticket {
+  padding-bottom: 3rem;
+}
+
+.select-ticket .ticket-step {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.select-ticket .step-text {
+  position: relative;
+}
+
+.select-ticket .step-text::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 7px;
+  width: 7px;
+  background-color: #ec5242;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 5px;
+}
+
+.select-ticket .heading-info {
+  border: 1px solid #d3d3d3;
+  border-radius: 100px;
+  font-size: 0.85rem;
+}
+
+.select-ticket .border-table {
+  margin: auto;
+  min-width: 80%;
+  border: 10px solid transparent;
+  -o-border-image: repeating-linear-gradient(-45deg, #ec5242 0, #ec5242 1em, transparent 1em, transparent 2em, #272a31 2em, #272a31 3em, transparent 3em, transparent 4em) 20 repeat;
+     border-image: repeating-linear-gradient(-45deg, #ec5242 0, #ec5242 1em, transparent 1em, transparent 2em, #272a31 2em, #272a31 3em, transparent 3em, transparent 4em) 20 repeat;
+}
+
+.ticket-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.ticket-button .btn-book {
+  padding-left: 4rem;
+  padding-right: 4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.menu-table .menu-option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.menu-table thead td {
+  border-bottom: none;
+}
+
+.menu-table tbody td {
+  border-top: none;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.menu-table tbody td:nth-child(n):not(:last-child) {
+  border-right: none;
+}
+
+.menu-table tbody td:nth-child(n+1):not(:first-child) {
+  border-left: none;
 }
 
 .footer {
