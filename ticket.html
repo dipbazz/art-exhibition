@@ -35,33 +35,44 @@
         </ul>
       </nav>
     </div>
-    <div class="bottom-header py-2 px-3 max-width d-md-flex justify-md-space-between">
-      <a class="navbar-toogle d-md-none" id="navbar-toogle">
-        <span class="iconify font-2x text-dark" data-icon="dashicons:menu-alt3" data-inline="false"></span>
+
+    <div class="p-2 p-md-0">
+      <a class="navbar-toogle d-md-none pl-2 p-md-0" id="navbar-toogle-open">
+        <span class="iconify font-2x text-dark menu-open" data-icon="dashicons:menu-alt3" data-inline="false"></span>
       </a>
+    </div>
+
+    <div class="bottom-header py-2 px-3 max-width d-md-flex justify-md-space-between" id="navbar-menu">
+      <a class="navbar-toogle d-md-none pl-3" id="navbar-toogle-close">
+        <span class="iconify font-2x text-dark menu-close" data-icon="codicon:chrome-close" data-inline="false"></span>
+      </a>
+
       <div class="logo-wrapper d-none d-md-flex align-md-center">
         <a href="index.html" class="header-logo logo">
           <span class="iconify font-4x text-red" data-icon="ps:arto" data-inline="false"></span>
         </a>
       </div>
 
-      <nav class="navbar collapse hide d-md-flex align-md-center" id="navbar-menu">
+      <nav class="navbar d-md-flex align-md-center">
         <ul class="navbar-items d-md-flex mr-2">
-          <li class="navbar-item"><a href="index.html" class="nav-link py-2 px-3 active">Home</a></li>
-          <li class="navbar-item"><a href="index.html#program" class="nav-link py-2 px-3">Program</a></li>
-          <li class="navbar-item"><a href="index.html#artist" class="nav-link py-2 px-3">Artist</a></li>
-          <li class="navbar-item"><a href="index.html#partner" class="nav-link py-2 px-3">Partner</a></li>
-          <li class="navbar-item"><a href="about.html" class="nav-link py-2 px-3">About</a></li>
+          <li class="navbar-item py-2"><a href="index.html" class="nav-link py-2 px-3 active">Home</a></li>
+          <li class="navbar-item py-2"><a href="index.html#program" class="nav-link py-2 px-3">Program</a></li>
+          <li class="navbar-item py-2"><a href="index.html#artist" class="nav-link py-2 px-3">Artist</a></li>
+          <li class="navbar-item py-2"><a href="index.html#partner" class="nav-link py-2 px-3">Partner</a></li>
+          <li class="navbar-item py-2"><a href="about.html" class="nav-link py-2 px-3">About</a></li>
         </ul>
 
-        <a href="ticket.html" class="btn-outline btn-outline-red text-red ml-5 px-2">Reservation</a>
+        <div class="py-3">
+          <a href="ticket.html" class="btn-outline btn-outline-red text-red px-2">Reservation</a>
+        </div>
+
       </nav>
     </div>
   </header>
 
   <main>
     <section class="p-2 select-ticket">
-      <h1 class="main-heading">Select Tickets</h1>
+      <h1 class="main-heading text-center p-2">Select Tickets</h1>
 
       <div class="max-width mt-2">
         <div class="ticket-step d-flex justify-center mb-3">
@@ -135,7 +146,7 @@
     </section>
 
     <section class="p-2 select-ticket bg-lighter">
-      <h1 class="main-heading">Select Your launch</h1>
+      <h1 class="main-heading text-center p-2">Select Your launch</h1>
 
       <div class="max-width mt-2">
         <div class="ticket-step d-flex justify-center">
@@ -235,7 +246,7 @@
       </div>
 
       <div class="mt-4 ticket-button d-flex justify-center">
-        <button type="button" class="btn btn-red btn-book">Order Now</button>
+        <button type="button" class="btn btn-red btn-book font-w-400">Order Now</button>
       </div>
 
     </section>

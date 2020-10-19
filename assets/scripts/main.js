@@ -16,10 +16,19 @@ function stickyNav() {
 }
 
 // side navbar pop up when clicked on hamburger menu icon.
-var toogle_menu = document.getElementById('navbar-toogle');
+var menu_open = document.getElementById('navbar-toogle-open');
+var menu_close = document.getElementById('navbar-toogle-close')
+var menu = document.getElementById('navbar-menu');
 
-toogle_menu.onclick = openNavMenu;
+menu_open.onclick = openNavMenu;
+menu_close.onclick = closeNavMenu;
 
 function openNavMenu() {
-  console.log('clicked');
+  menu.classList.add('show-menu');
+  navbar.classList.remove('fixed-header');
 };
+
+function closeNavMenu() {
+  menu.classList.remove('show-menu');
+  stickyNav();
+}

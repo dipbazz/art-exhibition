@@ -1,6 +1,5 @@
 @import 'config';
 @import 'utility';
-@import 'mixins';
 
 * {
   margin: 0;
@@ -38,8 +37,6 @@ table {
 }
 
 .main-heading {
-  text-align: center;
-  padding: 1rem;
   position: relative;
 }
 
@@ -55,12 +52,43 @@ table {
 }
 
 // styles for navbar
+.navbar-items {
+  list-style-type: none;
+}
+
 .header {
   position: fixed;
   z-index: 100;
   left: 0;
   right: 0;
   background: transparent;
+
+  .bottom-header {
+    position: fixed;
+    background: #fff;
+    width: 220px;
+    left: -220px;
+    top: 0;
+    bottom: 0;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0);
+    transition: left 0.3s linear, box-shadow 0.3s linear;
+
+    &.show-menu {
+      box-shadow: 5px 0 15px rgba(0, 0, 0, 0);
+      left: 0;
+    }
+
+    .btn-outline {
+      border-width: 4px;
+    }
+
+    .nav-link {
+      &.active,
+      &:hover {
+        color: $red-color;
+      }
+    }
+  }
 
   &.fixed-header {
     position: fixed;
@@ -71,6 +99,27 @@ table {
     .bottom-header {
       padding: 0.5rem 1.5rem;
     }
+  }
+}
+
+.navbar-toogle {
+  .iconify {
+    transition: margin-left 0.2s linear;
+  }
+}
+
+.navbar-toogle:hover {
+  .iconify {
+    color: lighten($color: $dark-color, $amount: 10%);
+    cursor: pointer;
+  }
+
+  .menu-open {
+    margin-left: 5px;
+  }
+
+  .menu-close {
+    margin-left: -5px;
   }
 }
 
@@ -96,23 +145,16 @@ table {
 
   &.about {
     background-image: url(../images/about_banner.jpg), linear-gradient(transparent 12%, transparentize($dark-color, 0.8) 12%);
-    text-align: center;
 
     .email {
       text-decoration: underline;
-      font-weight: bold;
     }
   }
 
   &-highlight {
-    .top {
-      font-weight: normal;
-    }
-
     .main {
       color: darken($red-color, 10%);
       line-height: 1;
-      font-weight: 900;
     }
   }
 
@@ -120,10 +162,6 @@ table {
     border: 2px solid $white-color;
     background-color: transparentize($color: $light-color, $amount: 0.2);
     color: $dark-color;
-  }
-
-  &-date {
-    font-weight: 900;
   }
 
   &-location {
@@ -151,7 +189,6 @@ table {
   }
 
   .program-title {
-    font-weight: 900;
     flex: 2;
   }
 
@@ -160,14 +197,9 @@ table {
     font-size: 0.8rem;
   }
 
-  .program-button {
-    text-align: center;
-  }
-
   .btn-join {
     padding: 1.8rem 2.8rem;
     font-size: 1.1rem;
-    font-weight: bold;
   }
 }
 
@@ -241,11 +273,10 @@ table {
       border-radius: 3px;
       width: 100%;
       text-transform: uppercase;
-      font-weight: 700;
       padding: 1rem;
     }
 
-    .iconify {
+    .icon-down {
       font-size: 1.5rem;
     }
   }
@@ -276,13 +307,7 @@ table {
 }
 
 // about page styles start
-.heading-info {
-  text-align: center;
-}
-
 .about-logo {
-  text-align: center;
-
   .logo-wrapper {
     border: 1px solid $light-color;
     max-width: 300px;
@@ -300,7 +325,6 @@ table {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    text-align: center;
 
     &:hover {
       background-color: transparentize($color: $red-color, $amount: 0.5);
@@ -378,7 +402,6 @@ table {
   .btn-book {
     padding-left: 4rem;
     padding-right: 4rem;
-    font-weight: bold;
     text-transform: uppercase;
   }
 }

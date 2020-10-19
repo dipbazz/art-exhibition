@@ -1,25 +1,14 @@
 // header styles
-.navbar-items {
-  list-style-type: none;
-}
-
-.bottom-header {
-  .btn-outline {
-    border-width: 4px;
-  }
-
-  .nav-link {
-    &.active,
-    &:hover {
-      color: $red-color;
-    }
-  }
-}
-
 .header {
   position: relative;
   background: $white-color;
   box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+
+  .bottom-header {
+    position: unset;
+    width: unset;
+    box-shadow: none;
+  }
 
   &.fixed-header {
     .top-header {
@@ -72,7 +61,6 @@
 
   .program-item {
     display: block;
-    text-align: center;
   }
 
   .program-more {
