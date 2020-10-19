@@ -36,6 +36,10 @@ table {
   }
 }
 
+// table, thead, tfoot, tbody, tr, th, td {
+//   display: block;
+// }
+
 .main-heading {
   position: relative;
 }
@@ -207,6 +211,14 @@ table {
 .artist {
   &-item {
     align-items: center;
+    transition: all 0.2s linear;
+
+    &:hover {
+      background-color: $white-color;
+      box-shadow: 0 0 10px rgba($color: $dark-color, $alpha: 0.2);
+      cursor: pointer;
+      border-radius: 5px;
+    }
   }
 
   &-img {
@@ -368,6 +380,29 @@ table {
 
 .select-ticket {
   padding-bottom: 3rem;
+  position: relative;
+
+  &:first-child {
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: -20px;
+      left: 50%;
+      height: 40px;
+      width: 40px;
+      background-color: $red-color;
+      z-index: 1;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      background: url('https://api.iconify.design/bi:chevron-down.svg?color=white') no-repeat center center / 60%;
+    }
+  }
 
   .step-text {
     position: relative;
@@ -407,28 +442,31 @@ table {
 }
 
 .menu-table {
+  grid-template-columns: 1fr 2fr;
+
+  .table-head {
+    border: 1px solid $light-color;
+  }
+
   thead {
-    td {
-      border-bottom: none;
+    th {
+      border: none;
     }
   }
 
   tbody {
     td {
-      border-top: none;
       padding-top: 2rem;
       padding-bottom: 2rem;
+      border-left: none;
 
-      &:nth-child(n):not(:last-child) {
-        border-right: none;
-      }
-
-      &:nth-child(n+1):not(:first-child) {
-        border-left: none;
+      &:nth-child(n):not(:first-child) {
+        border-top: none;
       }
     }
   }
 }
+
 // ticket page styles end
 
 // footer styles

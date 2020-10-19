@@ -105,6 +105,16 @@
 }
 // about page styles end
 
+// ticket page styles start
+.menu-table {
+  tbody {
+    td:first-child {
+      border-left: 1px solid $light-color;
+    }
+  }
+}
+// ticket page styles end
+
 // footer styles
 .footer {
   justify-content: center;

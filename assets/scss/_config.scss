@@ -13,7 +13,7 @@ $lg-width: 1200px;
 
 // variables list.
 $color-list: ("dark": $dark-color, "red": $red-color, "light": $light-color, "lighter": $lighter-color, "white": $white-color);
-$display-list: (none, block, flex, grid);
+$display-list: (none, block, flex, grid, table, table-row, table-header-group);
 
 // flex box variables list
 $flex-justify-content: (flex-start, flex-end, center, space-between, space-around);

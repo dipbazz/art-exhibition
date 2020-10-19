@@ -83,7 +83,7 @@
         </div>
 
         <div class="table-wrapper mb-3 border-table">
-          <table class="table">
+          <table class="table d-none d-md-table">
             <thead>
               <tr class="bg-lighter">
                 <td>Ticket</td>
@@ -140,12 +140,94 @@
               </tr>
             </tbody>
           </table>
+
+          <table class="table d-md-none">
+            <tbody>
+                <tr class="bg-lighter">
+                  <td colspan="2">1-Day-Ticket / Normal</td>
+                </tr>
+                <tr>
+                  <td>20. Oct (Tue)</td>
+                  <td>21. Oct (Wed)</td>
+                </tr>
+                <tr>
+                  <td>
+                    <h2 class="text-red pb-1">$70 </h2>
+                    <input type="radio" name="price">
+                  </td>
+                  <td>
+                    <h2 class="text-red pb-1">$70</h2>
+                    <input type="radio" name="price">
+                  </td>
+                </tr>
+
+                <tr class="bg-lighter">
+                  <td colspan="2">1-Day-Ticket / Students</td>
+                </tr>
+                <tr>
+                  <td>20. Oct (Tue)</td>
+                  <td>21. Oct (Wed)</td>
+                </tr>
+                <tr>
+                  <td>
+                    <h2 class="text-red pb-1">$30 </h2>
+                    <input type="radio" name="price">
+                  </td>
+                  <td>
+                    <h2 class="text-red pb-1">$30</h2>
+                    <input type="radio" name="price">
+                  </td>
+                </tr>
+
+                <tr class="bg-lighter">
+                  <td colspan="2">2-Day-Tickets </td>
+                </tr>
+                <tr>
+                  <td colspan="2">20 - 21 Oct (Tue - Wed)</td>
+                </tr>
+                <tr>
+                  <td>Normal</td>
+                  <td>Students</td>
+                </tr>
+                <tr>
+                  <td>
+                    <h2 class="text-red pb-1">$100 </h2>
+                    <input type="radio" name="price">
+                  </td>
+                  <td>
+                    <h2 class="text-red pb-1">$50</h2>
+                    <input type="radio" name="price">
+                  </td>
+                </tr>
+
+                <tr class="bg-lighter">
+                  <td colspan="2">2-Day-Tickets </td>
+                </tr>
+                <tr>
+                  <td colspan="2">20 - 21 Oct (Tue - Wed)</td>
+                </tr>
+                <tr>
+                  <td>Affiliate</td>
+                  <td>Partner</td>
+                </tr>
+                <tr>
+                  <td>
+                    <h2 class="text-red pb-1">$0 </h2>
+                    <input type="radio" name="price">
+                  </td>
+                  <td>
+                    <h2 class="text-red pb-1">$0</h2>
+                    <input type="radio" name="price">
+                  </td>
+                </tr>
+            </tbody>
+          </table>
         </div>
       </div>
 
     </section>
 
-    <section class="p-2 select-ticket bg-lighter">
+    <section class="p-2 pt-4 select-ticket bg-lighter">
       <h1 class="main-heading text-center p-2">Select Your launch</h1>
 
       <div class="max-width mt-2">
@@ -157,14 +239,14 @@
         </div>
 
         <div class="table-wrapper mt-3 mb-3">
-          <table class="table menu-table">
-            <thead>
-              <tr class="table-head">
-                <td colspan="5">Day 1</td>
+          <table class="table menu-table d-grid d-md-table">
+            <thead class="table-head d-flex justify-center align-center d-md-table-header-group">
+              <tr class="">
+                <th colspan="5">Day 1</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr class="d-flex flex-column d-md-table-row">
                 <td>
                   <label class="menu-option d-flex-justify-center align-center">
                     <span class="pr-1">menu 1</span>
@@ -201,14 +283,14 @@
         </div>
 
         <div class="table-wrapper mt-3 mb-3">
-          <table class="table menu-table">
-            <thead>
-              <tr class="table-head">
-                <td colspan="5">Day 2</td>
+          <table class="table menu-table d-grid d-md-table">
+            <thead class="table-head d-flex justify-center align-center d-md-table-header-group">
+              <tr class="">
+                <th colspan="5">Day 2</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr class="d-flex flex-column d-md-table-row">
                 <td>
                   <label class="menu-option d-flex-justify-center align-center">
                     <span class="pr-1">menu 1</span>

@@ -534,6 +534,18 @@
   display: grid;
 }
 
+.d-table {
+  display: table;
+}
+
+.d-table-row {
+  display: table-row;
+}
+
+.d-table-header-group {
+  display: table-header-group;
+}
+
 .justify-flex-start {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
@@ -1016,6 +1028,18 @@
     display: grid;
   }
 
+  .d-md-table {
+    display: table;
+  }
+
+  .d-md-table-row {
+    display: table-row;
+  }
+
+  .d-md-table-header-group {
+    display: table-header-group;
+  }
+
   .font-md-1x {
     font-size: 1rem;
   }
@@ -1366,6 +1390,16 @@ table th {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.artist-item:hover {
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 10px rgba(39, 42, 49, 0.2);
+  box-shadow: 0 0 10px rgba(39, 42, 49, 0.2);
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 .artist-img {
@@ -1518,6 +1552,28 @@ table th {
 
 .select-ticket {
   padding-bottom: 3rem;
+  position: relative;
+}
+
+.select-ticket:first-child::before,
+.select-ticket:first-child::after {
+  position: absolute;
+  content: "";
+  bottom: -20px;
+  left: 50%;
+  height: 40px;
+  width: 40px;
+  background-color: #ec5242;
+  z-index: 1;
+}
+
+.select-ticket:first-child::before {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.select-ticket:first-child::after {
+  background: url("https://api.iconify.design/bi:chevron-down.svg?color=white") no-repeat center center/60%;
 }
 
 .select-ticket .step-text {
@@ -1556,22 +1612,27 @@ table th {
   text-transform: uppercase;
 }
 
-.menu-table thead td {
-  border-bottom: none;
+.menu-table {
+  -ms-grid-columns: 1fr 2fr;
+  grid-template-columns: 1fr 2fr;
+}
+
+.menu-table .table-head {
+  border: 1px solid #d3d3d3;
+}
+
+.menu-table thead th {
+  border: none;
 }
 
 .menu-table tbody td {
-  border-top: none;
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-
-.menu-table tbody td:nth-child(n):not(:last-child) {
-  border-right: none;
-}
-
-.menu-table tbody td:nth-child(n+1):not(:first-child) {
   border-left: none;
+}
+
+.menu-table tbody td:nth-child(n):not(:first-child) {
+  border-top: none;
 }
 
 .footer {
@@ -1694,6 +1755,10 @@ table th {
 
   .past-exhibition-item.second {
     margin-left: 0.5rem;
+  }
+
+  .menu-table tbody td:first-child {
+    border-left: 1px solid #d3d3d3;
   }
 
   .footer {
