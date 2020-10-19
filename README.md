@@ -12,28 +12,28 @@ This project is based on an online website for an art exhibition and a part of m
 
 ![screenshot](./assets/images/app_screenshot.png)
 
-The features of this project are listed as below:
-1. The website is completely responsive on mobile and screen size above 768px.
+The features of this project are listed below:
+1. The website is completely responsive to mobile and screen sizes above 768px.
 
 2. The site contains information for art exhibition:
-- Common information on everypage.
+- Common information on every page.
     - Header with site navigation links.
     - Footer with logo and copyright information.
-    
-- Information on Homepage.
+
+- Information on the Homepage.
     - Banner image with information regarding when the event is going to happen.
     - Main program of the event.
     - Featured artists.
     - Partners who supported the program.
-    
-- Information on about us page:
+
+- Information on the about us page:
     - Some information about the event
-    - Information regarding how logo was choosen.
+    - Information regarding how the logo was chosen.
     - Past exhibition links.
 
-- Information on ticket page:
-    - Options to select ticket for 1 day 2 day or affiliate/partner and price regarding the ticket type.
-    - Options to choose different launch based on the day of visit.
+- Information on the ticket page:
+    - Options to select tickets for 1 day 2 days or affiliate/partner and price regarding the ticket type.
+    - Options to choose different launch based on the day of the visit.
 
 ## Built With
 

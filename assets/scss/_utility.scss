@@ -122,10 +122,73 @@
   }
 }
 
-@media (min-width: $medium) {
+// display utility classes
+@each $display in $display-list {
+  .d-#{$display} {
+    display: $display;
+  }
+}
+
+// utility for flex box
+@each $item in $flex-justify-content {
+  .justify-#{$item} {
+    justify-content: $item;
+  }
+}
+
+@each $item in $flex-align-items {
+  .align-#{$item} {
+    align-items: $item;
+  }
+}
+
+@each $item in $flex-wrap {
+  .flex-#{$item} {
+    flex-wrap: $item;
+  }
+}
+
+@each $item in $flex-direction {
+  .flex-#{$item} {
+    flex-direction: $item;
+  }
+}
+
+// responsiveness for utility
+@media (min-width: 768px) {
+  @each $display in $display-list {
+    .d-md-#{$display} {
+      display: $display;
+    }
+  }
+
   @for $value from 1 through 5 {
     .font-md-#{$value}x {
       font-size: #{$value}rem;
+    }
+  }
+
+  @each $item in $flex-justify-content {
+    .justify-md-#{$item} {
+      justify-content: $item;
+    }
+  }
+
+  @each $item in $flex-align-items {
+    .align-md-#{$item} {
+      align-items: $item;
+    }
+  }
+
+  @each $item in $flex-wrap {
+    .flex-md-#{$item} {
+      flex-wrap: $item;
+    }
+  }
+
+  @each $item in $flex-direction {
+    .flex-md-#{$item} {
+      flex-direction: $item;
     }
   }
 }

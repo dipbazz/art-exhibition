@@ -1,5 +1,6 @@
 @import 'config';
 @import 'utility';
+@import 'mixins';
 
 * {
   margin: 0;
@@ -54,17 +55,6 @@ table {
 }
 
 // styles for navbar
-.bottom-header {
-  .logo-wrapper,
-  .navbar {
-    display: none;
-  }
-}
-
-.top-header {
-  display: none;
-}
-
 .header {
   position: fixed;
   z-index: 100;
@@ -102,10 +92,6 @@ table {
   background-repeat: no-repeat;
   min-height: 60vh;
   padding-top: 4rem;
-  padding-bottom: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   background-blend-mode: multiply;
 
   &.about {
@@ -151,8 +137,6 @@ table {
   color: $white-color;
 
   .program-item {
-    display: flex;
-    align-items: center;
     background-color: lighten($dark-color, 10%);
     border: 2px solid transparent;
 
@@ -180,10 +164,6 @@ table {
     text-align: center;
   }
 
-  .program-more {
-    display: none;
-  }
-
   .btn-join {
     padding: 1.8rem 2.8rem;
     font-size: 1.1rem;
@@ -194,12 +174,7 @@ table {
 // artist styles
 .artist {
   &-item {
-    display: flex;
     align-items: center;
-
-    &:nth-child(n+4) {
-      display: none;
-    }
   }
 
   &-img {
@@ -266,9 +241,6 @@ table {
       border-radius: 3px;
       width: 100%;
       text-transform: uppercase;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       font-weight: 700;
       padding: 1rem;
     }
@@ -281,13 +253,6 @@ table {
 
 // partner styles
 .partner {
-  &-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  }
-
   &-item {
     width: 180px;
 
@@ -335,9 +300,6 @@ table {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-align: center;
 
     &:hover {
@@ -383,11 +345,6 @@ table {
 .select-ticket {
   padding-bottom: 3rem;
 
-  .ticket-step {
-    display: flex;
-    justify-content: center;
-  }
-
   .step-text {
     position: relative;
 
@@ -418,9 +375,6 @@ table {
 }
 
 .ticket-button {
-  display: flex;
-  justify-content: center;
-
   .btn-book {
     padding-left: 4rem;
     padding-right: 4rem;
@@ -430,12 +384,6 @@ table {
 }
 
 .menu-table {
-  .menu-option {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
   thead {
     td {
       border-bottom: none;
@@ -462,11 +410,8 @@ table {
 
 // footer styles
 .footer {
-  display: flex;
-  align-items: center;
   padding-left: 4rem;
   padding-right: 4rem;
-  flex-wrap: wrap;
 
   &.bg-dark {
     color: white;
@@ -474,11 +419,6 @@ table {
 
   &.about-footer {
     justify-content: center;
-  }
-
-  .logo-wrapper {
-    display: flex;
-    align-items: center;
   }
 
   .footer-logo-text {

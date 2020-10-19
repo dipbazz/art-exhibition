@@ -14,3 +14,12 @@ function stickyNav() {
     navbar.classList.remove('fixed-header');
   }
 }
+
+// side navbar pop up when clicked on hamburger menu icon.
+var toogle_menu = document.getElementById('navbar-toogle');
+
+toogle_menu.onclick = openNavMenu;
+
+function openNavMenu() {
+  console.log('clicked');
+};

@@ -14,9 +14,9 @@
 <body>
 
   <header class="header" id="header">
-    <div class="top-header bg-dark">
+    <div class="top-header bg-dark d-none d-md-block">
       <nav class="navbar py-1 px-2 max-width">
-        <ul class="navbar-items">
+        <ul class="navbar-items d-md-flex justify-md-flex-end">
           <li class="navbar-item">
             <a href="#" class="navbar-links text-white p-1"><span class="iconify" data-icon="brandico:facebook" data-inline="false"></span></a>
           </li>
@@ -35,18 +35,18 @@
         </ul>
       </nav>
     </div>
-    <div class="bottom-header py-2 px-3 max-width">
-      <div class="navbar-toogle">
+    <div class="bottom-header py-2 px-3 max-width d-md-flex justify-md-space-between">
+      <a class="navbar-toogle d-md-none" id="navbar-toogle">
         <span class="iconify font-2x text-dark" data-icon="dashicons:menu-alt3" data-inline="false"></span>
-      </div>
-      <div class="logo-wrapper">
+      </a>
+      <div class="logo-wrapper d-none d-md-flex align-md-center">
         <a href="index.html" class="header-logo logo">
           <span class="iconify font-4x text-red" data-icon="ps:arto" data-inline="false"></span>
         </a>
       </div>
 
-      <nav class="navbar">
-        <ul class="navbar-items mr-2">
+      <nav class="navbar collapse hide d-md-flex align-md-center" id="navbar-menu">
+        <ul class="navbar-items d-md-flex mr-2">
           <li class="navbar-item"><a href="index.html" class="nav-link py-2 px-3 active">Home</a></li>
           <li class="navbar-item"><a href="index.html#program" class="nav-link py-2 px-3">Program</a></li>
           <li class="navbar-item"><a href="index.html#artist" class="nav-link py-2 px-3">Artist</a></li>
@@ -114,9 +114,9 @@
           Take a look at the last two Global Art Exhibition which took place in place first and place second.
         </p>
 
-        <div class="past-exhibition-wrapper mt-3 pb-5">
+        <div class="past-exhibition-wrapper mt-3 pb-5 d-md-flex justify-md-center">
           <a href="#" class="past-exhibition-link">
-            <div class="past-exhibition-item first text-white p-3 mb-2">
+            <div class="past-exhibition-item d-flex justify-center align-center first text-white p-3 mb-2">
               <div>
                 <h1 class="date mb-1">2018</h1>
                 <p>Global art exhibition 2018 in place first</p>
@@ -125,7 +125,7 @@
           </a>
 
           <a href="#" class="past-exhibition-link">
-            <div class="past-exhibition-item second text-white p-3">
+            <div class="past-exhibition-item d-flex justify-center align-center second text-white p-3">
               <div>
                 <h1 class="date mb-1">2016</h1>
                 <p>Global art exhibition 2016 in place second</p>
@@ -141,9 +141,9 @@
   </main>
 
   <footer class="bg-dark">
-    <div class="max-width footer bg-dark py-5 about-footer">
+    <div class="max-width footer bg-dark py-5 about-footer d-flex align-center flex-wrap">
       <div class="left-footer">
-        <a href="index.html" class="logo-wrapper pr-3">
+        <a href="index.html" class="logo-wrapper d-flex align-center pr-3">
           <figure class="footer-logo logo">
             <span class="iconify font-4x text-red" data-icon="ps:arto" data-inline="false"></span>
           </figure>
