@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+  <title>Art Exhibition ticket page.</title>
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="top-header bg-dark d-none d-md-block">
+      <nav class="navbar py-1 px-2 max-width">
+        <ul class="navbar-items d-md-flex justify-md-flex-end">
+          <li class="navbar-item">
+            <a href="#" class="navbar-links text-white p-1"><span class="iconify" data-icon="brandico:facebook" data-inline="false"></span></a>
+          </li>
+          <li class="navbar-item">
+            <a href="#" class="navbar-links text-white p-1"><span class="iconify" data-icon="ant-design:twitter-outlined" data-inline="false"></span></a>
+          </li>
+          <li class="navbar-item">
+            <a href="#" class="navbar-links text-white p-1">English</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#" class="navbar-links text-white p-1">My Page</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#" class="navbar-links text-white p-1">Logout</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="p-2 p-md-0">
+      <a class="navbar-toogle d-md-none pl-2 p-md-0" id="navbar-toogle-open">
+        <span class="iconify font-2x text-dark menu-open" data-icon="dashicons:menu-alt3" data-inline="false"></span>
+      </a>
+    </div>
+
+    <div class="bottom-header py-2 px-3 max-width d-md-flex justify-md-space-between" id="navbar-menu">
+      <a class="navbar-toogle d-md-none pl-3" id="navbar-toogle-close">
+        <span class="iconify font-2x text-dark menu-close" data-icon="codicon:chrome-close" data-inline="false"></span>
+      </a>
+
+      <div class="logo-wrapper d-none d-md-flex align-md-center">
+        <a href="index.html" class="header-logo logo">
+          <span class="iconify font-4x text-red" data-icon="ps:arto" data-inline="false"></span>
+        </a>
+      </div>
+
+      <nav class="navbar d-md-flex align-md-center">
+        <ul class="navbar-items d-md-flex mr-2">
+          <li class="navbar-item py-2"><a href="index.html" class="nav-link py-2 px-3 active">Home</a></li>
+          <li class="navbar-item py-2"><a href="index.html#program" class="nav-link py-2 px-3">Program</a></li>
+          <li class="navbar-item py-2"><a href="index.html#artist" class="nav-link py-2 px-3">Artist</a></li>
+          <li class="navbar-item py-2"><a href="index.html#partner" class="nav-link py-2 px-3">Partner</a></li>
+          <li class="navbar-item py-2"><a href="about.html" class="nav-link py-2 px-3">About</a></li>
+        </ul>
+
+        <div class="py-3">
+          <a href="ticket.html" class="btn-outline btn-outline-red text-red px-2">Reservation</a>
+        </div>
+
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="p-2 select-ticket">
+      <h1 class="main-heading text-center p-2">Select Tickets</h1>
+
+      <div class="max-width mt-2">
+        <div class="ticket-step d-flex justify-center mb-3">
+          <p class="heading-info text-dark mt-3 p-2">
+            <span class="text-red mr-1 step-text pl-2">Step 1</span>
+            <span>Please select the day when you want to join the Global Art Exhibition 2020</span>
+          </p>
+        </div>
+
+        <div class="table-wrapper mb-3 border-table">
+          <table class="table d-none d-md-table">
+            <thead>
+              <tr class="bg-lighter">
+                <td>Ticket</td>
+                <td colspan="2">1-Day-Ticket</td>
+                <td>2-Day-Ticket</td>
+                <td>Affiliate/Partner</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Date</td>
+                <td>20. Oct (Tue)</td>
+                <td>21. Oct (Wed)</td>
+                <td>20 - 21. Oct (Tue - Wed)</td>
+                <td>20 - 21. Oct (Tue - Wed)</td>
+              </tr>
+              <tr>
+                <td>Normal</td>
+                <td>
+                  <h2 class="text-red pb-1">$70</h2>
+                  <input type="radio" name="price">
+                </td>
+                <td>
+                  <h2 class="text-red pb-1">$70</h2>
+                  <input type="radio" name="price">
+                </td>
+                <td>
+                  <h2 class="text-red pb-1">$100</h2>
+                  <input type="radio" name="price">
+                </td>
+                <td>
+                  <h2 class="text-red pb-1">$0</h2>
+                  <input type="radio" name="price">
+                </td>
+              </tr>
+              <tr>
+                <td>Students</td>
+                <td>
+                  <h2 class="text-red pb-1">$30</h2>
+                  <input type="radio" name="price">
+                </td>
+                <td>
+                  <h2 class="text-red pb-1">$30</h2>
+                  <input type="radio" name="price">
+                </td>
+                <td>
+                  <h2 class="text-red pb-1">$50</h2>
+                  <input type="radio" name="price">
+                </td>
+                <td>
+                  <h2 class="text-red pb-1">$0</h2>
+                  <input type="radio" name="price">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="table d-md-none">
+            <tbody>
+                <tr class="bg-lighter">
+                  <td colspan="2">1-Day-Ticket / Normal</td>
+                </tr>
+                <tr>
+                  <td>20. Oct (Tue)</td>
+                  <td>21. Oct (Wed)</td>
+                </tr>
+                <tr>
+                  <td>
+                    <h2 class="text-red pb-1">$70 </h2>
+                    <input type="radio" name="price">
+                  </td>
+                  <td>
+                    <h2 class="text-red pb-1">$70</h2>
+                    <input type="radio" name="price">
+                  </td>
+                </tr>
+
+                <tr class="bg-lighter">
+                  <td colspan="2">1-Day-Ticket / Students</td>
+                </tr>
+                <tr>
+                  <td>20. Oct (Tue)</td>
+                  <td>21. Oct (Wed)</td>
+                </tr>
+                <tr>
+                  <td>
+                    <h2 class="text-red pb-1">$30 </h2>
+                    <input type="radio" name="price">
+                  </td>
+                  <td>
+                    <h2 class="text-red pb-1">$30</h2>
+                    <input type="radio" name="price">
+                  </td>
+                </tr>
+
+                <tr class="bg-lighter">
+                  <td colspan="2">2-Day-Tickets </td>
+                </tr>
+                <tr>
+                  <td colspan="2">20 - 21 Oct (Tue - Wed)</td>
+                </tr>
+                <tr>
+                  <td>Normal</td>
+                  <td>Students</td>
+                </tr>
+                <tr>
+                  <td>
+                    <h2 class="text-red pb-1">$100 </h2>
+                    <input type="radio" name="price">
+                  </td>
+                  <td>
+                    <h2 class="text-red pb-1">$50</h2>
+                    <input type="radio" name="price">
+                  </td>
+                </tr>
+
+                <tr class="bg-lighter">
+                  <td colspan="2">2-Day-Tickets </td>
+                </tr>
+                <tr>
+                  <td colspan="2">20 - 21 Oct (Tue - Wed)</td>
+                </tr>
+                <tr>
+                  <td>Affiliate</td>
+                  <td>Partner</td>
+                </tr>
+                <tr>
+                  <td>
+                    <h2 class="text-red pb-1">$0 </h2>
+                    <input type="radio" name="price">
+                  </td>
+                  <td>
+                    <h2 class="text-red pb-1">$0</h2>
+                    <input type="radio" name="price">
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="p-2 pt-4 select-ticket bg-lighter">
+      <h2 class="main-heading text-center p-2">Select Your launch</h2>
+
+      <div class="max-width mt-2">
+        <div class="ticket-step d-flex justify-center">
+          <p class="heading-info text-dark mt-3 p-2">
+            <span class="text-red mr-1 step-text pl-2">Step 2</span>
+            <span>Please select your launch for registered day. There will be no further coasts for the launch.</span>
+          </p>
+        </div>
+
+        <div class="table-wrapper mt-3 mb-3">
+          <table class="table menu-table d-grid d-md-table">
+            <thead class="table-head d-flex justify-center align-center d-md-table-header-group">
+              <tr class="">
+                <th colspan="5">Day 1</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="d-flex flex-column d-md-table-row">
+                <td>
+                  <label class="menu-option d-flex-justify-center align-center">
+                    <span class="pr-1">menu 1</span>
+                    <input type="radio" name="day1">
+                  </label>
+                </td>
+                <td>
+                  <label class="menu-option d-flex-justify-center align-center">
+                    <span class="pr-1">menu 2</span>
+                    <input type="radio" name="day1">
+                  </label>
+                </td>
+                <td>
+                  <label class="menu-option d-flex-justify-center align-center">
+                    <span class="pr-1">menu 3</span>
+                    <input type="radio" name="day1">
+                  </label>
+                </td>
+                <td>
+                  <label class="menu-option d-flex-justify-center align-center">
+                    <span class="pr-1">menu 4</span>
+                    <input type="radio" name="day1">
+                  </label>
+                </td>
+                <td>
+                  <label class="menu-option d-flex-justify-center align-center">
+                    <span class="pr-1">menu 5</span>
+                    <input type="radio" name="day1">
+                  </label>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-wrapper mt-3 mb-3">
+          <table class="table menu-table d-grid d-md-table">
+            <thead class="table-head d-flex justify-center align-center d-md-table-header-group">
+              <tr class="">
+                <th colspan="5">Day 2</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="d-flex flex-column d-md-table-row">
+                <td>
+                  <label class="menu-option d-flex-justify-center align-center">
+                    <span class="pr-1">menu 1</span>
+                    <input type="radio" name="day1">
+                  </label>
+                </td>
+                <td>
+                  <label class="menu-option d-flex-justify-center align-center">
+                    <span class="pr-1">menu 2</span>
+                    <input type="radio" name="day1">
+                  </label>
+                </td>
+                <td>
+                  <label class="menu-option d-flex-justify-center align-center">
+                    <span class="pr-1">menu 3</span>
+                    <input type="radio" name="day1">
+                  </label>
+                </td>
+                <td>
+                  <label class="menu-option d-flex-justify-center align-center">
+                    <span class="pr-1">menu 4</span>
+                    <input type="radio" name="day1">
+                  </label>
+                </td>
+                <td>
+                  <label class="menu-option d-flex-justify-center align-center">
+                    <span class="pr-1">menu 5</span>
+                    <input type="radio" name="day1">
+                  </label>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="mt-4 ticket-button d-flex justify-center">
+        <button type="button" class="btn btn-red btn-book font-w-400">Order Now</button>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="bg-dark">
+    <div class="max-width footer bg-dark py-5 about-footer d-flex align-center flex-wrap">
+      <div class="left-footer">
+        <a href="index.html" class="logo-wrapper d-flex align-center pr-3">
+          <figure class="footer-logo logo">
+            <span class="iconify font-4x text-red" data-icon="ps:arto" data-inline="false"></span>
+          </figure>
+          <h2 class="footer-logo-text pl-1">Global <br> Art Exhibition</h2>
+        </a>
+      </div>
+
+      <div class="copyright-container">
+        <p class="copyright">2020 Global Art Exhibition. Some Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/scripts/main.js"></script>
+</body>
+</html>

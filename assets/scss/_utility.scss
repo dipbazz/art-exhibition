@@ -1,0 +1,276 @@
+// background and text color classes
+@each $name, $color in $color-list {
+  .bg-#{$name} {
+    background-color: $color;
+  }
+
+  .text-#{$name} {
+    color: $color;
+  }
+}
+
+// fixed width
+.max-width {
+  max-width: $lg-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// buttons
+.btn {
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.btn-outline {
+  border: 1px solid $light-color;
+  background: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.btn-outline-red {
+  border-color: $red-color;
+  transition: all 0.2s linear;
+
+  &:hover {
+    background-color: $red-color;
+    color: white;
+  }
+}
+
+.btn-red {
+  background-color: $red-color;
+  color: $white-color;
+  transition: all 0.2s linear;
+
+  &:hover {
+    background-color: darken($color: $red-color, $amount: 10%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transform: scale(0.95);
+  }
+}
+
+// margin and padding classes
+@for $space from 0 through 5 {
+  .m-#{$space} {
+    margin: #{$space * 0.5}rem;
+  }
+
+  .my-#{$space} {
+    margin-top: #{$space * 0.5}rem;
+    margin-bottom: #{$space * 0.5}rem;
+  }
+
+  .mx-#{$space} {
+    margin-left: #{$space * 0.5}rem;
+    margin-right: #{$space * 0.5}rem;
+  }
+
+  .mt-#{$space} {
+    margin-top: #{$space * 0.5}rem;
+  }
+
+  .mb-#{$space} {
+    margin-bottom: #{$space * 0.5}rem;
+  }
+
+  .ml-#{$space} {
+    margin-left: #{$space * 0.5}rem;
+  }
+
+  .mr-#{$space} {
+    margin-right: #{$space * 0.5}rem;
+  }
+
+  .p-#{$space} {
+    padding: #{$space * 0.5}rem;
+  }
+
+  .py-#{$space} {
+    padding-top: #{$space * 0.5}rem;
+    padding-bottom: #{$space * 0.5}rem;
+  }
+
+  .px-#{$space} {
+    padding-left: #{$space * 0.5}rem;
+    padding-right: #{$space * 0.5}rem;
+  }
+
+  .pt-#{$space} {
+    padding-top: #{$space * 0.5}rem;
+  }
+
+  .pb-#{$space} {
+    padding-bottom: #{$space * 0.5}rem;
+  }
+
+  .pl-#{$space} {
+    padding-left: #{$space * 0.5}rem;
+  }
+
+  .pr-#{$space} {
+    padding-right: #{$space * 0.5}rem;
+  }
+}
+
+// typography
+@for $value from 1 through 5 {
+  .font-#{$value}x {
+    font-size: #{$value}rem;
+  }
+}
+
+@for $value from 1 through 9 {
+  .font-w-#{$value}00 {
+    font-weight: #{$value * 100};
+  }
+}
+
+@each $item in $text-align {
+  .text-#{$item} {
+    text-align: $item;
+  }
+}
+
+// display utility classes
+@each $display in $display-list {
+  .d-#{$display} {
+    display: $display;
+  }
+}
+
+// flex box properties
+@each $item in $flex-justify-content {
+  .justify-#{$item} {
+    justify-content: $item;
+  }
+}
+
+@each $item in $flex-align-items {
+  .align-#{$item} {
+    align-items: $item;
+  }
+}
+
+@each $item in $flex-wrap {
+  .flex-#{$item} {
+    flex-wrap: $item;
+  }
+}
+
+@each $item in $flex-direction {
+  .flex-#{$item} {
+    flex-direction: $item;
+  }
+}
+
+// responsiveness for utility
+@media (min-width: 768px) {
+  // margin and padding classes
+  @for $space from 0 through 5 {
+    .m-md-#{$space} {
+      margin: #{$space * 0.5}rem;
+    }
+
+    .my-md-#{$space} {
+      margin-top: #{$space * 0.5}rem;
+      margin-bottom: #{$space * 0.5}rem;
+    }
+
+    .mx-md-#{$space} {
+      margin-left: #{$space * 0.5}rem;
+      margin-right: #{$space * 0.5}rem;
+    }
+
+    .mt-md-#{$space} {
+      margin-top: #{$space * 0.5}rem;
+    }
+
+    .mb-md-#{$space} {
+      margin-bottom: #{$space * 0.5}rem;
+    }
+
+    .ml-md-#{$space} {
+      margin-left: #{$space * 0.5}rem;
+    }
+
+    .mr-md-#{$space} {
+      margin-right: #{$space * 0.5}rem;
+    }
+
+    .p-md-#{$space} {
+      padding: #{$space * 0.5}rem;
+    }
+
+    .py-md-#{$space} {
+      padding-top: #{$space * 0.5}rem;
+      padding-bottom: #{$space * 0.5}rem;
+    }
+
+    .px-md-#{$space} {
+      padding-left: #{$space * 0.5}rem;
+      padding-right: #{$space * 0.5}rem;
+    }
+
+    .pt-md-#{$space} {
+      padding-top: #{$space * 0.5}rem;
+    }
+
+    .pb-md-#{$space} {
+      padding-bottom: #{$space * 0.5}rem;
+    }
+
+    .pl-md-#{$space} {
+      padding-left: #{$space * 0.5}rem;
+    }
+
+    .pr-md-#{$space} {
+      padding-right: #{$space * 0.5}rem;
+    }
+  }
+
+  // display
+  @each $display in $display-list {
+    .d-md-#{$display} {
+      display: $display;
+    }
+  }
+
+  // typography
+  @for $value from 1 through 5 {
+    .font-md-#{$value}x {
+      font-size: #{$value}rem;
+    }
+  }
+
+  .text-md-center {
+    text-align: center;
+  }
+
+  // flex properties
+  @each $item in $flex-justify-content {
+    .justify-md-#{$item} {
+      justify-content: $item;
+    }
+  }
+
+  @each $item in $flex-align-items {
+    .align-md-#{$item} {
+      align-items: $item;
+    }
+  }
+
+  @each $item in $flex-wrap {
+    .flex-md-#{$item} {
+      flex-wrap: $item;
+    }
+  }
+
+  @each $item in $flex-direction {
+    .flex-md-#{$item} {
+      flex-direction: $item;
+    }
+  }
+}

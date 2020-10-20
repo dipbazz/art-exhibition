@@ -1,0 +1,498 @@
+@import 'config';
+@import 'utility';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:focus {
+  outline: 1px dotted $dark-color;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+table {
+  border-collapse: collapse;
+
+  td,
+  th {
+    padding: 0.8rem 1.5rem;
+    text-align: center;
+  }
+}
+
+// table, thead, tfoot, tbody, tr, th, td {
+//   display: block;
+// }
+
+.main-heading {
+  position: relative;
+}
+
+.main-heading::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 1.5px;
+  background-color: $red-color;
+}
+
+// styles for navbar
+.navbar-items {
+  list-style-type: none;
+}
+
+.header {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  background: transparent;
+
+  .bottom-header {
+    position: fixed;
+    background: #fff;
+    width: 220px;
+    left: -220px;
+    top: 0;
+    bottom: 0;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0);
+    transition: left 0.3s linear, box-shadow 0.3s linear;
+
+    &.show-menu {
+      box-shadow: 5px 0 15px rgba(0, 0, 0, 0);
+      left: 0;
+    }
+
+    .btn-outline {
+      border-width: 4px;
+    }
+
+    .nav-link {
+      &.active,
+      &:hover {
+        color: $red-color;
+      }
+    }
+  }
+
+  &.fixed-header {
+    position: fixed;
+    background: #fff;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15);
+    animation: slide-down 0.2s ease-in;
+
+    .bottom-header {
+      padding: 0.5rem 1.5rem;
+    }
+  }
+}
+
+.navbar-toogle {
+  .iconify {
+    transition: margin-left 0.2s linear;
+  }
+}
+
+.navbar-toogle:hover {
+  .iconify {
+    color: lighten($color: $dark-color, $amount: 10%);
+    cursor: pointer;
+  }
+
+  .menu-open {
+    margin-left: 5px;
+  }
+
+  .menu-close {
+    margin-left: -5px;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    top: -150px;
+  }
+
+  to {
+    top: 0;
+  }
+}
+
+// banner styles
+.banner {
+  background-image: url(../images/cover.jpg), linear-gradient(transparent 12%, transparentize($dark-color, 0.8) 12%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 60vh;
+  padding-top: 4rem;
+  background-blend-mode: multiply;
+
+  &.about {
+    background-image: url(../images/about_banner.jpg), linear-gradient(transparent 12%, transparentize($dark-color, 0.8) 12%);
+
+    .email {
+      text-decoration: underline;
+    }
+  }
+
+  &-highlight {
+    .main {
+      color: darken($red-color, 10%);
+      line-height: 1;
+    }
+  }
+
+  &-info {
+    border: 2px solid $white-color;
+    background-color: transparentize($color: $light-color, $amount: 0.2);
+    color: $dark-color;
+  }
+
+  &-location {
+    color: darken($white-color, 10%);
+  }
+}
+
+// program styles
+.program {
+  background-color: $dark-color;
+  color: $white-color;
+
+  .program-item {
+    background-color: lighten($dark-color, 10%);
+    border: 2px solid transparent;
+
+    &:hover {
+      border: 2px solid $white-color;
+      cursor: pointer;
+    }
+  }
+
+  .program-icon {
+    flex: 1;
+  }
+
+  .program-title {
+    flex: 2;
+  }
+
+  .program-info {
+    flex: 4;
+    font-size: 0.8rem;
+  }
+
+  .btn-join {
+    padding: 1.8rem 2.8rem;
+    font-size: 1.1rem;
+  }
+}
+
+// artist styles
+.artist {
+  &-item {
+    align-items: center;
+    transition: all 0.2s linear;
+
+    &:hover {
+      background-color: $white-color;
+      box-shadow: 0 0 10px rgba($color: $dark-color, $alpha: 0.2);
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  }
+
+  &-img {
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      height: 20px;
+      width: 20px;
+    }
+
+    &::before {
+      left: 0;
+      top: 0;
+      border-left: 3px double $red-color;
+      border-top: 3px double $red-color;
+    }
+
+    &::after {
+      right: 0;
+      bottom: 0;
+      border-right: 3px double $red-color;
+      border-bottom: 3px double $red-color;
+    }
+
+    img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+
+  &-info {
+    flex: 3;
+  }
+
+  &-profession {
+    font-style: italic;
+    position: relative;
+    font-size: 0.9rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 20px;
+      background-color: $light-color;
+      height: 1px;
+    }
+  }
+
+  &-short-bio {
+    font-size: 0.9rem;
+    color: $dark-color;
+    line-height: 1.4;
+  }
+
+  &-button {
+    .btn-more {
+      border-radius: 3px;
+      width: 100%;
+      text-transform: uppercase;
+      padding: 1rem;
+    }
+
+    .icon-down {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+// partner styles
+.partner {
+  &-item {
+    width: 180px;
+
+    .partner-logo {
+      filter: grayscale(1);
+      transition: filter 0.2s linear;
+
+      &:hover {
+        filter: grayscale(0);
+      }
+    }
+  }
+
+  .partner-link {
+    &:focus {
+      .partner-logo {
+        filter: grayscale(0);
+      }
+    }
+  }
+}
+
+// about page styles start
+.about-logo {
+  .logo-wrapper {
+    border: 1px solid $light-color;
+    max-width: 300px;
+    padding: 2rem 4rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.past-exhibition {
+  .past-exhibition-item {
+    min-height: 250px;
+    background-color: transparentize($color: $red-color, $amount: 0.2);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:hover {
+      background-color: transparentize($color: $red-color, $amount: 0.5);
+    }
+
+    &.first {
+      background-image: url(../images/cover_2018.jpg);
+    }
+
+    &.second {
+      background-image: url(../images/cover_2016.jpg);
+    }
+  }
+
+  .past-exhibition-link:focus {
+    .past-exhibition-item {
+      background-color: transparentize($color: $red-color, $amount: 0.5);
+    }
+  }
+}
+// about page styles end
+
+// ticket page styles start
+.table-wrapper {
+  overflow-y: auto;
+
+  .table-head {
+    background-color: lighten($color: $light-color, $amount: 10%);
+  }
+}
+
+.table {
+  width: 100%;
+
+  td,
+  th {
+    font-size: 0.8rem;
+    border: 1px solid #ccc;
+  }
+}
+
+.select-ticket {
+  padding-bottom: 3rem;
+  position: relative;
+
+  &:first-child {
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: -20px;
+      left: 50%;
+      height: 40px;
+      width: 40px;
+      background-color: $red-color;
+      z-index: 1;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      background: url('https://api.iconify.design/bi:chevron-down.svg?color=white') no-repeat center center / 60%;
+    }
+  }
+
+  .step-text {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      height: 7px;
+      width: 7px;
+      background-color: $red-color;
+      transform: rotate(45deg);
+      top: 5px;
+    }
+  }
+
+  .heading-info {
+    border: 1px solid $light-color;
+    border-radius: 100px;
+    font-size: 0.85rem;
+  }
+
+  .border-table {
+    margin: auto;
+    min-width: 80%;
+    border: 10px solid transparent;
+    border-image: repeating-linear-gradient(-45deg, #ec5242 0, #ec5242 1em, transparent 1em, transparent 2em, #272a31 2em, #272a31 3em, transparent 3em, transparent 4em) 20 repeat;
+  }
+}
+
+.ticket-button {
+  .btn-book {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    text-transform: uppercase;
+  }
+}
+
+.menu-table {
+  grid-template-columns: 1fr 2fr;
+
+  .table-head {
+    border: 1px solid $light-color;
+  }
+
+  thead {
+    th {
+      border: none;
+    }
+  }
+
+  tbody {
+    td {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      border-left: none;
+
+      &:nth-child(n):not(:first-child) {
+        border-top: none;
+      }
+    }
+  }
+}
+
+// ticket page styles end
+
+// footer styles
+.footer {
+  padding-left: 4rem;
+  padding-right: 4rem;
+
+  &.bg-dark {
+    color: white;
+  }
+
+  &.about-footer {
+    justify-content: center;
+  }
+
+  .footer-logo-text {
+    white-space: nowrap;
+    line-height: 1;
+  }
+
+  .copyright {
+    color: #686868;
+  }
+}
+
+// media query import
+@media (min-width: $medium) {
+  @import 'tablet';
+}

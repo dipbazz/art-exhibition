@@ -1,0 +1,121 @@
+// header styles
+.header {
+  position: relative;
+  background: $white-color;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+
+  .bottom-header {
+    position: unset;
+    width: unset;
+    box-shadow: none;
+  }
+
+  &.fixed-header {
+    .top-header {
+      display: none;
+    }
+  }
+}
+
+// banner styles
+.banner {
+  background-image: url(../images/cover.jpg), linear-gradient(transparent 0%, transparentize($dark-color, 0.8) 0%);
+  min-height: 65vh;
+
+  &-highlight,
+  &-info,
+  &-date-location {
+    max-width: 60%;
+  }
+
+  &-highlight {
+    .top {
+      font-size: 2rem;
+    }
+
+    .main {
+      font-size: 4rem;
+    }
+  }
+
+  &.about {
+    background-image: url(../images/about_banner.jpg), linear-gradient(transparent 0%, transparentize($dark-color, 0.8) 0%);
+
+    .banner-highlight,
+    .banner-info,
+    .banner-date-location {
+      max-width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+// program styles
+.program {
+  .program-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 5px;
+  }
+
+  .program-item {
+    display: block;
+  }
+
+  .program-more {
+    display: block;
+    text-decoration: underline;
+
+    &:hover {
+      color: $red-color;
+    }
+  }
+}
+
+// artist styles
+.artist {
+  &-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// about page styles start
+.about-logo {
+  .heading-info {
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
+}
+
+.past-exhibition {
+  &-item {
+    min-height: 200px;
+    min-width: 350px;
+
+    &.first {
+      margin-right: 0.5rem;
+    }
+
+    &.second {
+      margin-left: 0.5rem;
+    }
+  }
+}
+// about page styles end
+
+// ticket page styles start
+.menu-table {
+  tbody {
+    td:first-child {
+      border-left: 1px solid $light-color;
+    }
+  }
+}
+// ticket page styles end
+
+// footer styles
+.footer {
+  justify-content: center;
+}

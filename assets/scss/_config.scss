@@ -1,0 +1,25 @@
+// variables
+$dark-color:#272a31;
+$red-color: #ec5242;
+$light-color: #d3d3d3;
+$white-color: #fff;
+$lighter-color: #f7f7f7;
+
+// breakpoint width variables.
+$medium: 768px;
+
+// widths
+$lg-width: 1200px;
+
+// variables list.
+$color-list: ("dark": $dark-color, "red": $red-color, "light": $light-color, "lighter": $lighter-color, "white": $white-color);
+$display-list: (none, block, flex, grid, table, table-row, table-header-group);
+
+// flex box variables list
+$flex-justify-content: (flex-start, flex-end, center, space-between, space-around);
+$flex-align-items: (flex-start, flex-end, center, stretch, baseline);
+$flex-direction: (row, row-reverse, column, column-reverse);
+$flex-wrap: (wrap, nowrap, wrap-reverse);
+
+// typography
+$text-align: (left, right, center, justify);
