@@ -524,8 +524,6 @@
 }
 
 .d-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -1018,8 +1016,6 @@
   }
 
   .d-md-flex {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
 
@@ -1714,7 +1710,6 @@ table th {
   .program .program-container {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr) [5];
     grid-template-columns: repeat(5, 1fr);
     grid-column-gap: 5px;
   }
